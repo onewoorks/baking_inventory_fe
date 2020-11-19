@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Layout } from 'antd';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import LayoutSider from './pages/layout/Sider.jsx'
+import LayoutHeader from './pages/layout/Header.jsx'
+import LayoutFooter from './pages/layout/Footer.jsx'
+
+const { Header, Footer, Content } = Layout;
+const App = () => (
+  <Layout style={{height:'100vh'}}>
+      <LayoutSider />
+      <Layout>
+        <LayoutHeader />
+        <Content>Content</Content>
+        <LayoutFooter />
+      </Layout>
+    </Layout>
+);
 
 export default App;
