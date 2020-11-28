@@ -1,15 +1,17 @@
 import React from 'react';
 import { Layout } from 'antd';
 import './App.css';
-import { Switch, Route} from 'react-router-dom'
+import { Router, Switch, Route} from 'react-router-dom'
 import LayoutSider from './pages/layout/Sider.jsx'
 import LayoutHeader from './pages/layout/Header.jsx'
 import LayoutFooter from './pages/layout/Footer.jsx'
 import routes from './routes'
 
-const { Header, Footer, Content } = Layout;
+const { Content } = Layout;
+
 const App = () => (
-  <Layout style={{height:'100vh'}}>
+
+    <Layout style={{ height: '100vh' }}>
       <LayoutSider />
       <Layout>
         <LayoutHeader />
