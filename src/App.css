@@ -1,3 +1,6 @@
 @import '~antd/dist/antd.css';
 
 .header { background: #fff;}
+
+.ant-btn { margin-bottom: 16px}
+.ant-table-cell > button { margin-bottom:0}
