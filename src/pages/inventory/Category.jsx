@@ -18,7 +18,7 @@ const InventoryCategory = () => {
     ]
 
     React.useEffect(()=>{
-        axios.get('http://localhost:8000/ref/category')
+        axios.get(`${REACT_APP_API}/ref/category`)
         .then(response => {
             setDataSource(response.data)
             setSpinning(false)
